@@ -7,9 +7,9 @@ pipeline {
       }
     }
 
-    stage('stop docker') {
+    stage('stop node docker') {
       steps {
-        sh '(docker rm -f node-docker-sample_server_1 | true) && docker-compose up -d server '
+        sh '(docker rm -f node-docker-sample_main_server_1 | true) && docker-compose up -d server '
       }
     }
 
